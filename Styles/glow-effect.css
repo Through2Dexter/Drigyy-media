@@ -1,0 +1,21 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+
+  position: relative;
+}
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.6),
+    transparent 40%
+  );
+  border-radius: inherit;
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+}
