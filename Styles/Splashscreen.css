@@ -10,7 +10,7 @@
   text-align: center;
   line-height: 98vh;
 }
-/*
+
 .splash.display-none {
   position: fixed;
   opacity: 0;
@@ -28,7 +28,7 @@
   width: 50%; /* Scales image relative to container */
   height: auto;
 }
-/*
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -38,4 +38,12 @@
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+}
+
+#preloader {
+  background: #000 (url(images/preloader.gif) no-repeat center center);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 600;
 }
