@@ -23,6 +23,7 @@
   text-align: center;
   line-height: 98vh;
   transition: all 0.9s;
+  z-index: -10;
 }
 .splashpic {
   width: 50%; /* Scales image relative to container */
@@ -38,4 +39,5 @@
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+  z-index: -10;
 }
