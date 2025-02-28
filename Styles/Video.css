@@ -42,7 +42,7 @@
 .thumbnailrow:hover {
   box-shadow: 5px 5px 35px 5px rgba(0, 0, 0, 0.1);
 }
-.thumbnailrow:hover:before,
+/* .thumbnailrow:hover:before,
 thumbnailrow:hover:after {
   display: block;
   content: "";
@@ -60,7 +60,7 @@ thumbnailrow:hover:after {
 .thumbnailrow:hover:after {
   background: #ff7200;
   animation: 2s counterclockwise infinite;
-}
+} */
 /* @keyframes clockwise {
   0% {
     top: -5px;

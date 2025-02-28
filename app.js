@@ -1,22 +1,23 @@
 "use strict";
+
 const btnClose = document.querySelector(".closemodal");
 const projectModal = document.querySelector(".projectModal");
 const overlay = document.querySelector(".overlay");
 const ioProject = document.querySelector(".patternedIO");
-const overlayHide = document.querySelector(".overlay-hide");
 
 const openModal = function () {
-  overlayHide.classList.add("overlay");
-  console.log("happy");
+  projectModal.classList.remove("projectModal-hide");
+  overlay.classList.remove("overlay-hide");
 };
-ioProject.addEventListener("click", openModal);
 
 const closeModal = function () {
   projectModal.classList.add("projectModal-hide");
   overlay.classList.add("overlay-hide");
-  console.log("dexter");
 };
-btnClose.addEventListener("click", closeModal);
+
+ioProject?.addEventListener("click", openModal);
+btnClose?.addEventListener("click", closeModal);
+overlay?.addEventListener("click", closeModal); // Click outside to close
 
 const splash = document.querySelector(".splash");
 

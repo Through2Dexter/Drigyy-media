@@ -11,23 +11,6 @@ body {
   background-color: rgb(152, 152, 152);
 }
 
-.projectModal {
-  flex: 1;
-  justify-content: center;
-  position: fixed;
-  z-index: 1000;
-  background-color: rgb(141, 141, 141);
-  width: 1000px;
-  height: 800px;
-  box-shadow: 10px 10px 0px 1px rgba(255, 255, 255, 0.1);
-  border-width: 6px;
-  border-style: dashed;
-  border-color: black;
-
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 .modal-thumb {
   display: block;
   margin-left: auto;
@@ -76,10 +59,34 @@ body {
 
   z-index: 300;
 }
-.overlay-hide {
-  display: none;
+
+.projectModal {
+  flex: 1;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgb(141, 141, 141);
+  width: 1000px;
+  height: 800px;
+  box-shadow: 10px 10px 0px 1px rgba(255, 255, 255, 0.1);
+  border-width: 6px;
+  border-style: dashed;
+  border-color: black;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.projectModal,
+.overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
 
-.projectModal-hide {
-  display: none;
+.projectModal-hide,
+.overlay-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
