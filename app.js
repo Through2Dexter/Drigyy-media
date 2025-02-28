@@ -1,3 +1,23 @@
+"use strict";
+const btnClose = document.querySelector(".closemodal");
+const projectModal = document.querySelector(".projectModal");
+const overlay = document.querySelector(".overlay");
+const ioProject = document.querySelector(".patternedIO");
+const overlayHide = document.querySelector(".overlay-hide");
+
+const openModal = function () {
+  overlayHide.classList.add("overlay");
+  console.log("happy");
+};
+ioProject.addEventListener("click", openModal);
+
+const closeModal = function () {
+  projectModal.classList.add("projectModal-hide");
+  overlay.classList.add("overlay-hide");
+  console.log("dexter");
+};
+btnClose.addEventListener("click", closeModal);
+
 const splash = document.querySelector(".splash");
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -5,16 +25,3 @@ document.addEventListener("DOMContentLoaded", (e) => {
     splash.classList.add("display-none");
   }, 2000);
 });
-
-const handleOnMouseMove = e => {
-  const {currentTarget: target} = e 
-  const rect = target.getBoundingClientRect(),
-  x=e.clientX - rect.left,
-  y = e.clientY - rect.top;
-  target.style.setProperty('--mouse-x', `${x}px`);
-}
-
-
-for(const card of document.querySelectorAll('.card')) {
-  card.onmousemove = e => handleOnMouseMove(e)
-}

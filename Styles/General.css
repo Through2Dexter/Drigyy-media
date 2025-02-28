@@ -10,3 +10,76 @@ body {
   padding-right: 24px;
   background-color: rgb(152, 152, 152);
 }
+
+.projectModal {
+  flex: 1;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgb(141, 141, 141);
+  width: 1000px;
+  height: 800px;
+  box-shadow: 10px 10px 0px 1px rgba(255, 255, 255, 0.1);
+  border-width: 6px;
+  border-style: dashed;
+  border-color: black;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-thumb {
+  display: block;
+  margin-left: auto;
+  margin-top: 10%;
+  margin-right: auto;
+  width: 70%;
+}
+.modal-title {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  line-height: normal;
+  font-family: Roboto, Ariel;
+  padding-top: 10px;
+  font-size: 25px;
+}
+.tech {
+  width: 140px;
+}
+.techcont {
+  padding-left: 60px;
+  padding-top: 50px;
+  margin: 0 auto;
+
+  align-items: center;
+  width: 500px;
+}
+
+.closeimg {
+  width: 50px;
+}
+.closemodal {
+  padding-left: 6px;
+  padding-top: 6px;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  z-index: 300;
+}
+.overlay-hide {
+  display: none;
+}
+
+.projectModal-hide {
+  display: none;
+}
