@@ -1,4 +1,3 @@
-
 .thumbnail {
   width: 100%;
   display: block;
@@ -22,7 +21,7 @@
 }
 .thumbnailrow {
   margin-bottom: 8px;
-  position:relative;
+  position: relative;
 }
 .video-author,
 .video-stats {
@@ -30,7 +29,6 @@
   color: rgb(96, 96, 96);
 }
 .video-author {
-
   margin-bottom: 4px;
 }
 .videogrid {
@@ -40,36 +38,55 @@
   row-gap: 40px;
   padding-top: 20px;
 }
-@media (max-width:750px){
+
+.thumbnailrow:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.thumbnailrow:hover:before,
+thumbnailrow:hover:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  margin-left: -15px;
+  padding-left: px;
+  background: #b9b9b9;
+  height: 30;
+
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.thumbnailrow:hover:after {
+  background: #ff7200;
+  animation: 2s counterclockwise infinite;
+}
+
+@media (max-width: 750px) {
   .videogrid {
     grid-template-columns: 1fr 1fr;
-  
-  }
-  
-  }
-  @media (min-width: 10000px){
-  .videogrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  
   }
 }
-  @media (min-width: 751px) and (max-width:
-999px){
+@media (min-width: 10000px) {
   .videogrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
   }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+  .videogrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .video-time {
   background-color: black;
   color: white;
   position: absolute;
   bottom: 8px;
   right: 5px;
-  font-family: Roboto, Ariel ;
+  font-family: Roboto, Ariel;
   font-size: 12px;
   font-weight: 500;
   padding: 4px;
   border-radius: 2px;
-
 }
-
